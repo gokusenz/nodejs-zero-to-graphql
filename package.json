@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/gokusenz/nodejs-zero-to-graphql/issues"
   },
-  "homepage": "https://github.com/gokusenz/nodejs-zero-to-graphql#readme"
+  "homepage": "https://github.com/gokusenz/nodejs-zero-to-graphql#readme",
+  "dependencies": {
+    "express-graphql": "^0.6.6",
+    "graphql": "^0.10.3"
+  }
 }
