@@ -1,0 +1,26 @@
+version: '2'
+
+services:
+
+### Workspace Utilities Container ###########################
+    nodejs:
+        image: node:8.1-alpine
+        command: node /usr/src/app/src/index.js
+        ports:
+            - "3000:3000"            
+        volumes:
+            - .:/usr/src/app
+
+### MongoDB Container #######################################
+    mongo:
+        image: mongo:3.2
+        ports:
+            - "27017:27017"
+        volumes:
+            - ./data/mongo:/data/db
+
+### Add more Containers below ###############################
+networks:
+    default:
+        external:
+            name: microservicenetwork
